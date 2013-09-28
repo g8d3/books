@@ -15,6 +15,12 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+
+  <div class="field">
+    <%= f.label :author_id, 'Author' %><br>
+    <%= f.select :author_id, Author.all.collect {|p| [ p.name, p.id ] }, { prompt: 'Choose author' }, class: 'authors'  %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
