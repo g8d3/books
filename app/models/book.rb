@@ -2,5 +2,7 @@
 # rails c -----> Book.all
 class Book < ActiveRecord::Base
   validates_length_of :name , minimum: 10
+
+  belongs_to :author
 end
 
